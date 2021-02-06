@@ -15,7 +15,7 @@ class SignUp extends React.Component {
             email: '',
             password: '',
             confirmPassword: ''
-        }
+        };
     }
 
     handleSubmit = async event => {
@@ -23,6 +23,7 @@ class SignUp extends React.Component {
 
         const {displayName, email, password, confirmPassword} = this.state;
 
+        // eslint-disable-next-line
         if(password != confirmPassword){
             alert('password don\'t match');
             return;
@@ -46,7 +47,7 @@ class SignUp extends React.Component {
     handleChange = event => {
         const {name, value} = event.target;
 
-        this.state({[name]: value});
+        this.setState({[name]: value});
     }
 
     render() {
