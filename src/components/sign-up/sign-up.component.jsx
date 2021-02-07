@@ -23,8 +23,7 @@ class SignUp extends React.Component {
 
         const {displayName, email, password, confirmPassword} = this.state;
 
-        // eslint-disable-next-line
-        if(password != confirmPassword){
+        if(password !== confirmPassword){
             alert('password don\'t match');
             return;
         }
